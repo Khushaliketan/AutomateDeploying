@@ -11,3 +11,4 @@ Pre-requisites: Jenkins, Docker and a local folder (webfolder in my case) to kee
 5. Build Job3 to merge master and the branch before actual build adn trigger it remotely by giving the trigger to someone (QA) who passes the testing version. Since it merges with the master it is deployed into the production environment.
 
 Find the scripts of building the jobs under the respective folders and for a complete tutorial refer my medium article:
+https://medium.com/@khushalithakkar/test-deploy-webpages-in-just-seconds-now-put-your-worry-into-committing-new-features-aa83b0d155f5
