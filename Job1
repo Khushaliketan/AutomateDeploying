@@ -1,0 +1,15 @@
+Poll SCM checking every minute:
+
+* * * * *
+
+Build:
+
+sudo cp -v * /root/webfolder
+
+if sudo docker ps | grep tenv                           //checks if a testing env is already created (tenv)
+then 
+echo "Already running!"
+else
+sudo docker run -it -d -p 8088:80 -v /root/webfolder:/usr/local/apache2/htdocs/ --name tenv httpd            //Else creates it under the name tenv and using the httpd docker image
+fi
+
