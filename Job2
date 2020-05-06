@@ -1,0 +1,14 @@
+Poll SCM:
+
+* * * * *
+
+Build:
+
+sudo cp * /root/webfolder
+
+if sudo docker ps | grep prodenv
+then
+echo "Production env already running!"
+else
+sudo docker run -it -d -p 8081:80 -v /root/webfolder:/usr/local/apache2/htdocs/ --name prodenv httpd
+fi
